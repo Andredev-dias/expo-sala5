@@ -12,43 +12,75 @@ export default function Home() {
   }
 
   return (
-      <View style={s.body}>
-        <View style={s.wrap}>
-            <Text style={s.t}>LOGIN</Text>
-            <Text style={s.t}>Email</Text>
-            <TextInput style={s.input} onChangeText={setEmail} value={email} placeholder='Insira seu email'/>
-            <Text style={s.t}>Senha</Text>
-            <TextInput style={s.input} onChangeText={setPass} value={pass} placeholder='Insira sua senha'/>
-            
-            <View>
-              <TouchableOpacity style={s.button} onPress={go}>
-                  <Text style={s.btnText}>ENTRAR</Text>
-              </TouchableOpacity>
-            </View>
+    <View style={s.body}>
+      <View style={s.wrap}>
+        <Text style={s.t}>LOGIN</Text>
+        <Text style={s.t}>Email</Text>
+        <TextInput style={s.input} onChangeText={setEmail} value={email} placeholder='Insira seu email' />
+        <Text style={s.t}>Senha</Text>
+        <TextInput style={s.input} onChangeText={setPass} value={pass} placeholder='Insira sua senha' />
 
+        <View>
+          <TouchableOpacity style={s.button} onPress={go}>
+            <Text style={s.btnText}>ENTRAR</Text>
+          </TouchableOpacity>
         </View>
+
       </View>
+    </View>
   );
 }
 
 const s = StyleSheet.create({
- body:{
+  body: {
     backgroundColor: '#1f3d99',
     flex: 1
- },
- wrap:{
-    
- },
- t:{
-
- },
- input:{
-
- },
- button:{
-
- },
- btnText:{
-
- }
+  },
+  wrap: {
+    gap: 10,
+    backgroundColor: '#3668a8',
+    width: '60%',
+    height: 265,
+    alignSelf: 'center',
+    marginTop: '50%',
+    padding: 30,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+  },
+  t: {
+    color: '#ffffff',
+    fontSize: 18
+  },
+  input: {
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    backgroundColor: '#ffffff',
+    color: '#090909',
+    borderRadius: 5
+  },
+  button: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    backgroundColor: '#ffffff',
+    borderRadius: 5,
+    padding: 5
+  },
+  btnText: {
+    textAlign: 'center',
+    fontSize: 14,
+    fontWeight: 600
+  }
 });
